@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem de Serviço</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+
+            box-sizing: border-box  ;
+        }
+
+        body {
+            font-family: "Ubuntu", system-ui;
+            font-weight: 500;
+            margin: 20px;
+        }
+
+        .ordem-servico {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ordem-servico h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input,
+        select {
+            padding: 12px;
+            margin-bottom: 10px;
+            width: 400px;
+        }
+
+        button {
+
+            padding: 12px;
+            margin-bottom: 10px;
+            width: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Ordens de Serviço</h1>
+
+
+    <form id="ordemServicoForm">
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required>
+
+        <label for="preco">Preço:</label>
+        <input type="number" id="preco" name="preco" required>
+
+        <label for="dataAbertura">Data de Abertura:</label>
+        <input type="date" id="dataAbertura" name="dataAbertura" required>
+
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="ABERTA">Aberta</option>
+            <option value="FINALIZADA">Finalizada</option>
+            <option value="CANCELADA">Cancelada</option>
+        </select>
+
+        <label for="cliente">Cliente (ID):</label>
+        <input type="email" id="cliente" name="cliente" required>
+        <div>
+            <button type="submit">Cadastrar</button>
+
+        </div>
+    </form>
+
+    <div id="ordens-servico"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
